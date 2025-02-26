@@ -1,0 +1,134 @@
+{
+    "server": "http://localhost:8080",
+    "endpoints": [
+      {
+        "path": "/hello",
+        "method": "GET",
+        "description": "Returns a simple HTML message",
+        "response": "<h1>Hello from Java Server</h1>"
+      },
+      {
+        "path": "/json",
+        "method": "GET",
+        "description": "Returns a JSON response",
+        "response": {
+          "message": "Hello from JSON API"
+        }
+      },
+      {
+        "path": "/text",
+        "method": "GET",
+        "description": "Returns plain text",
+        "response": "This is a plain text response"
+      },
+      {
+        "path": "/timestamp",
+        "method": "GET",
+        "description": "Returns current timestamp in JSON",
+        "response": {
+          "timestamp": "1700000000000"
+        }
+      },
+      {
+        "path": "/greet?name=John",
+        "method": "GET",
+        "description": "Returns a personalized greeting",
+        "response": {
+          "greeting": "Hello, John!"
+        }
+      },
+      {
+        "path": "/random",
+        "method": "GET",
+        "description": "Returns a random number",
+        "response": {
+          "random": 42
+        }
+      },
+      {
+        "path": "/notfound",
+        "method": "GET",
+        "description": "Returns 404 error",
+        "response": {
+          "error": "This API endpoint does not exist",
+          "status": 404
+        }
+      },
+      {
+        "path": "/error",
+        "method": "GET",
+        "description": "Returns 500 Internal Server Error",
+        "response": {
+          "error": "Internal Server Error",
+          "status": 500
+        }
+      },
+      {
+        "path": "/slow",
+        "method": "GET",
+        "description": "Simulates a slow API response with a 3-second delay",
+        "response": {
+          "message": "Delayed response after 3 seconds"
+        }
+      },
+      {
+        "path": "/echo?data=test",
+        "method": "GET",
+        "description": "Echoes query parameters",
+        "response": {
+          "echo": {
+            "data": "test"
+          }
+        }
+      },
+      {
+        "path": "/html",
+        "method": "GET",
+        "description": "Returns an HTML page",
+        "response": "<html><body><h1>Welcome to My Java Server</h1></body></html>"
+      },
+      {
+        "path": "/unauthorized",
+        "method": "GET",
+        "description": "Returns 401 Unauthorized error",
+        "response": {
+          "error": "Unauthorized Access",
+          "status": 401
+        }
+      },
+      {
+        "path": "/users",
+        "method": "GET",
+        "description": "Returns a list of users in JSON format",
+        "response": [
+          {
+            "id": 1,
+            "name": "Alice"
+          },
+          {
+            "id": 2,
+            "name": "Bob"
+          }
+        ]
+      },
+      {
+        "path": "/maintenance",
+        "method": "GET",
+        "description": "Returns 503 Server Maintenance message",
+        "response": {
+          "error": "Server Under Maintenance",
+          "status": 503
+        }
+      },
+      {
+        "path": "/env",
+        "method": "GET",
+        "description": "Returns system environment variables in JSON format",
+        "response": {
+          "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk-amd64",
+          "PATH": "/usr/bin:/bin:/usr/sbin:/sbin"
+        }
+      }
+    ]
+  }
+  
